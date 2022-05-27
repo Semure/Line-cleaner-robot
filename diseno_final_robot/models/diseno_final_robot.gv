@@ -1,0 +1,29 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"base_caster1" [label="base_caster1"];
+"llanta_caster1" [label="llanta_caster1"];
+"base_caster2" [label="base_caster2"];
+"llanta_caster2" [label="llanta_caster2"];
+"camara" [label="camara"];
+"cepillo" [label="cepillo"];
+"llanta1" [label="llanta1"];
+"llanta2" [label="llanta2"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "base_caster.1" [label="xyz: -0.21825 0.026283 -0.05594 \nrpy: 1.5711 0.00069423 -2.7771"]
+"base_caster.1" -> "base_caster1"
+"base_caster1" -> "llanta_caster.1" [label="xyz: 0 -0.018 0 \nrpy: 0 -0 0"]
+"llanta_caster.1" -> "llanta_caster1"
+"base_link" -> "base_caster.2" [label="xyz: -0.21763 0.12551 -0.05594 \nrpy: 1.5712 -0.00060505 -0.6193"]
+"base_caster.2" -> "base_caster2"
+"base_caster2" -> "llanta_caster.2" [label="xyz: 0 -0.018 0 \nrpy: 0 -0 0"]
+"llanta_caster.2" -> "llanta_caster2"
+"base_link" -> "camara.1" [label="xyz: 0.11119 0.077959 0.10052 \nrpy: -1.5708 1.2303 3.14159"]
+"camara.1" -> "camara"
+"base_link" -> "cepillo.1" [label="xyz: -0.020064 0.056633 -0.0088271 \nrpy: 2.209 -0 1.5708"]
+"cepillo.1" -> "cepillo"
+"base_link" -> "llanta.1" [label="xyz: 0.058802 -0.062563 -0.029378 \nrpy: 0 -0.037671 -3.14159"]
+"llanta.1" -> "llanta1"
+"base_link" -> "llanta.2" [label="xyz: 0.058573 0.21463 -0.028692 \nrpy: 3.14159 -1.1524 -3.14159"]
+"llanta.2" -> "llanta2"
+}

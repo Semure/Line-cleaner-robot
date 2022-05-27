@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="diseno_final_robot">
+  <link name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.109137752535927 0.0419806407410149 -0.0760341853308248"
+        rpy="0 0 0" />
+      <mass
+        value="14.5723926451771" />
+      <inertia
+        ixx="0.124657965775517"
+        ixy="0.0059609663898011"
+        ixz="-1.79849267536098E-05"
+        iyy="0.23187346426943"
+        iyz="-1.79358330442558E-05"
+        izz="0.189759000135656" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="llanta1">
+    <inertial>
+      <origin
+        xyz="-1.3359E-10 0.012744 -1.2645E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.23577" />
+      <inertia
+        ixx="0.00029454"
+        ixy="-4.6374E-13"
+        ixz="-5.3956E-11"
+        iyy="0.00057368"
+        iyz="-3.9038E-13"
+        izz="0.00029454" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/llanta1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/llanta1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="llanta.1"
+    type="continuous">
+    <origin
+      xyz="0.058802 -0.062563 -0.029378"
+      rpy="0 -0.037671 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="llanta1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link name="llanta2">
+    <inertial>
+      <origin
+        xyz="-1.3359E-10 0.012744 -1.2645E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.23577" />
+      <inertia
+        ixx="0.00029454"
+        ixy="-4.6374E-13"
+        ixz="-5.3956E-11"
+        iyy="0.00057368"
+        iyz="-3.9038E-13"
+        izz="0.00029454" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/llanta2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/llanta2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="llanta.2"
+    type="continuous">
+    <origin
+      xyz="0.058573 0.21463 -0.028692"
+      rpy="-3.1416 -1.1524 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="llanta2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link name="cepillo">
+    <inertial>
+      <origin
+        xyz="0.021722 -6.7968E-08 8.588E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.28891" />
+      <inertia
+        ixx="0.00089633"
+        ixy="1.5922E-10"
+        ixz="1.6885E-10"
+        iyy="0.00048375"
+        iyz="2.7106E-10"
+        izz="0.00048375" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/cepillo.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/cepillo.STL" />
+      </geometry>
+    </collision>
+  </link>  <joint name="cepillo.1"
+    type="continuous">
+    <origin
+      xyz="-0.020064 0.056633 -0.0088271"
+      rpy="2.209 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="cepillo" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link name="llanta_caster1">
+    <inertial>
+      <origin
+        xyz="-0.010664 -0.020985 9.7145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.008626" />
+      <inertia
+        ixx="1.0412E-06"
+        ixy="-1.1167E-22"
+        ixz="7.9409E-23"
+        iyy="1.0412E-06"
+        iyz="1.3938E-22"
+        izz="1.9805E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/llanta_caster1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/llanta_caster1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="llanta_caster.1" 
+      type="fixed">
+   		<parent link="base_caster1"/>
+   		<child link="llanta_caster1"/>
+   		<origin xyz="0 -0.018 0" rpy="0 0 0" />
+   		<axis xyz="0 0 0" />
+ 	</joint>
+  <link name="llanta_caster2">
+    <inertial>
+      <origin
+        xyz="-0.0106648419028103 -0.0209609354184714 -1.66533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.00862604840260992" />
+      <inertia
+        ixx="1.04119936971148E-06"
+        ixy="3.97046694025453E-23"
+        ixz="-2.11758236813575E-22"
+        iyy="1.04119936971147E-06"
+        iyz="-1.33589668927314E-21"
+        izz="1.98048265250342E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/llanta_caster2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/llanta_caster2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="llanta_caster.2" 
+      type="fixed">
+   		<parent link="base_caster2"/>
+   		<child link="llanta_caster2"/>
+   		<origin xyz="0 -0.018 0" rpy="0 0 0" />
+   		<axis xyz="0 0 0" />
+ 	</joint>
+  <link name="base_caster2">
+    <inertial>
+      <origin
+        xyz="-0.00261183863321096 -0.0179384254131546 7.65960662674203E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.00214896191834065" />
+      <inertia
+        ixx="2.35965069348382E-07"
+        ixy="-6.7940503373618E-08"
+        ixz="-1.55884423959175E-13"
+        iyy="1.32786093030239E-07"
+        iyz="1.51631985361064E-12"
+        izz="2.49214455592119E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/base_caster2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/base_caster2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_caster.2"
+    type="continuous">
+    <origin
+      xyz="-0.21763 0.12551 -0.05594"
+      rpy="1.5712 -0.00060505 -0.6193" />
+    <parent
+      link="base_link" />
+    <child
+      link="base_caster2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link name="base_caster1">
+    <inertial>
+      <origin
+        xyz="-0.0026118 -0.017938 7.0478E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.002149" />
+      <inertia
+        ixx="2.3597E-07"
+        ixy="-6.7941E-08"
+        ixz="-2.3969E-13"
+        iyy="1.3279E-07"
+        iyz="1.289E-12"
+        izz="2.4921E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/base_caster1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/base_caster1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="base_caster.1"
+    type="continuous">
+    <origin
+      xyz="-0.21825 0.026283 -0.05594"
+      rpy="1.5711 0.00069423 -2.7771" />
+    <parent
+      link="base_link" />
+    <child
+      link="base_caster1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link name="camara">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/camara.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diseno_final_robot/meshes/camara.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="camara.1"
+    type="fixed">
+    <origin
+      xyz="0.11119 0.077959 0.10052"
+      rpy="-1.5708 1.2303 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="camara" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
